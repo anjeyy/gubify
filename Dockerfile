@@ -14,13 +14,9 @@ RUN addgroup -g 1000 -S unbendable && \
     chown -R unbendable:unbendable /app
 USER unbendable
 
-COPY target/nfl-core*.jar /app/nfl-core.jar
+COPY target/gubify*.jar /app/gubify.jar
 
-HEALTHCHECK CMD curl -f http://localhost:8090/nfl/actuator/health || exit 1
+HEALTHCHECK CMD curl -f http://localhost:8080/actuator/health || exit 1
 
 CMD java -Dspring.profiles.active=default \
-         -Dspring.datasource.url=jdbc:postgresql://${POSTGRES_ENDPOINT}/${POSTGRES_DB} \
-         -Dspring.datasource.username=${POSTGRES_USER} \
-         -Dspring.datasource.password=${POSTGRES_PASS} \
-         -Deureka.client.service-url.defaultZone=${EUREKA_URI} \
          -jar /app/nfl-core.jar
