@@ -49,7 +49,7 @@ jobs:
     needs:
       - build-jar
 
-    #    if: github.event.pull_request.merged
+    if: github.event.pull_request.merged
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
