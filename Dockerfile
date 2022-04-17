@@ -19,4 +19,4 @@ COPY target/gubify*.jar /app/gubify.jar
 HEALTHCHECK CMD curl -f http://localhost:8080/actuator/health || exit 1
 
 CMD java -Dspring.profiles.active=default \
-         -jar /app/nfl-core.jar
+         -jar /app/gubify.jar
