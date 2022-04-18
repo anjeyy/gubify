@@ -4,10 +4,15 @@ An application to host as a webservice, serving to search for the most popular g
 
 ## table of content
 
-- [How to run](#how-to-run)
-- [Available endpoints](#available-endpoints)
+- [how to run](#how-to-run)
+- [available endpoints](#available-endpoints)
     - [top X](#top-x)
-- [General](#general)
+    - [paginated top results](#paginated-top-results)
+    - [aggregated top results](#aggregated-top-results)
+    - [creation date top results](#creation-date-top-results)
+- [general](#general)
+    - [searching restrictions](#searching-restriction)
+    - [rate limit](#rate-limit)
 
 <br>
 
