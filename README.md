@@ -2,8 +2,34 @@
 
 > To do..
 
+An application to host as a webservice, serving to search for the most popular github repositories
+
+## table of content
+
+- [How to run](#how-to-run)
+- [Available endpoints](#available-endpoints)
+- [General](#general)
+
 <br>
-<br>
+
+## how to run
+
+- TODO
+
+----
+
+## available endpoints
+
+- TODO
+    - params
+
+## general
+
+- TODO
+- Restrictions
+- ohter stuff??
+
+----
 
 - only the first 1000 matches are availible
     - `https://api.github.com/search/repositories?q=stars&order=desc&page=1000`
