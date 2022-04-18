@@ -33,7 +33,7 @@ jobs:
         run: mvn --batch-mode --update-snapshots verify
 
       - name: Run Integration Tests
-        run: mvn --batch-mode --update-snapshots failsafe:integration-test -Dskip.failsafe.tests=false
+        run: mvn --batch-mode --update-snapshots failsafe:verify -Dskip.failsafe.tests=false
 
       - name: Save artifacts for other jobs
         run: |
