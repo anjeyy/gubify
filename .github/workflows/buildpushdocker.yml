@@ -29,6 +29,9 @@ jobs:
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots verify
 
+      - name: Run Integration Tests
+        run: mvn --batch-mode --update-snapshots failsafe:verify -Dskip.failsafe.tests=false
+
       - name: Save artifacts for other jobs
         run: |
           mkdir -p path/to/artifact
