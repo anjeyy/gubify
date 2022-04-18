@@ -66,7 +66,7 @@ public class GithubRepositoryController {
     }
 
     @GetMapping(path = "/github/repositories/top{top}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<GithubRepository>> searchForTop10GithubRepositories(
+    public ResponseEntity<List<GithubRepository>> searchForTopGithubRepositories(
         @PathVariable @Min(1) @Max(100) Integer top
     ) {
         List<GithubRepository> mostPopularGithubRepositories =
